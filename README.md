@@ -72,3 +72,18 @@ export default function MyCustomForm() {
 2. `Key` is needed to able to test via jest
 3. `Keys` should most be **not** unique among its siblings.
 4. `Key` prop helps React identify which items have changed, are added, or are removed.
+
+### What are advantages of using React Hooks?
+
+### What's the difference between a Controlled component and an Uncontrolled one in React?
+
+```
+// Controlled:
+<input type="text" value={value} onChange={handleChange} />
+
+// Uncontrolled:
+<input type="text" defaultValue="foo" ref={inputRef} />
+// Use `inputRef.current.value` to read the current value of <input>
+```
+
+### What is prop drilling and how can you avoid it?
