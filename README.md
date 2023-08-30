@@ -52,3 +52,10 @@ export default function MyCustomForm() {
 2.  Warning: Function components cannot be given refs.
 3.  Cannot read current property of undefined
 4.  Warning: Missing ref on element
+
+### What is "key" prop and what is the benefit of using it?
+
+1. `Key` is a special attribute you should include when mapping over arrays to render data.
+2. `Key` is needed to able to test via jest
+3. `Keys` should most be **not** unique among its siblings.
+4. `Key` prop helps React identify which items have changed, are added, or are removed.
