@@ -1,12 +1,12 @@
-const express = require('express');
+import express from 'express';
 const app = express();
-const http = require('http');
+import * as http from 'http';
 const server = http.createServer(app);
-const { Server } = require('socket.io');
+import { Server } from 'socket.io';
 const io = new Server(server);
 
 app.get('/', (req, res) => {
-  res.sendFile('chat server');
+  res.send('<h1>Chat Server</h1>');
 });
 
 io.on('connection', (socket) => {
