@@ -1,11 +1,24 @@
 # React Interview question
 
+### What is the Virtual DOM
+
+1. Virtual DOM (VDOM) and DOM are the same
+2. DOM is an in-memory representation of VDOM DOM
+3. Virtual DOM (VDOM) is an in-memory representation of Real DOM
+4. React update always firt DOM then VDOM
+
 ### What differnt between `useEffect` and `useLayoutEffect` ?
 
 1. No differnce both works similar to componentDidMount and componentDidUpdate
-2. `useLayoutEffect` get executed before v-dom is writen to dom
-3. `useEffect` get executed before v-dom is writen to dom
+2. `useLayoutEffect` get executed before Virtual DOM is writen to dom
+3. `useEffect` get executed before Virtual DOM is writen to dom
 4. `useEffect` is excuted just one componentDidMount
+
+### Why React uses className over class attribute?
+
+1. Warning apear: Invalid DOM property `class`. Did you mean `className`?
+2. class is a keyword in JavaScript, and JSX is an extension of JavaScript.
+3. class is needed to test the apllication
 
 ### For what the return of `useEffect` can be ussed
 
