@@ -1,12 +1,21 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import Navbar from './components/navbar';
+import LiveChat from './routes/chat';
+import HomePage from './routes/home';
 
-function App() {
-  const [count, setCount] = useState(0);
-
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
-}
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+const App = () => {
+  return (
+    <Router>
+      <div>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/livechat" component={LiveChat} />
+        </Switch>
+      </div>
+    </Router>
+  );
+};
 
 export default App;
